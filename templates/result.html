@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Processed Image</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Processing Complete</h1>
+
+        <p>Welcome, {{ name }}</p>
+        <p>{{ email }}</p>
+
+
+        <div class="images">
+
+            <div class="image-card">
+                <h2>Cropped</h2>
+                <img src="{{ url_for('processed', filename='cropped.png') }}">
+            </div>
+
+
+            <div class="image-card">
+                <h2>Resized</h2>
+                <img src="{{ url_for('processed', filename='resized.png') }}">
+            </div>
+
+
+            <div class="image-card">
+                <h2>Grayscale</h2>
+                <img src="{{ url_for('processed', filename='grayscale.png') }}">
+            </div>
+
+
+            <div class="image-card">
+                <h2>Blurred</h2>
+                <img src="{{ url_for('processed', filename='blurred.png') }}">
+            </div>
+
+
+            <div class="image-card">
+                <h2>Edge Detection</h2>
+                <img src="{{ url_for('processed', filename='edges.png') }}">
+            </div>
+
+        </div>
+
+        <a href="/" class="back-button">
+            Process Another Image
+        </a>
+
+    </div>
+
+</body>
+
+</html>
